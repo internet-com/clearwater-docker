@@ -10,6 +10,8 @@ spec:
         service: astaire
     spec:
       terminationGracePeriodSeconds: 120
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/astaire:{{IMAGE_TAG}}"
         imagePullPolicy: Always

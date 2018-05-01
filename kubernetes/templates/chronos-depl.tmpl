@@ -11,6 +11,8 @@ spec:
       labels:
         service: chronos
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       terminationGracePeriodSeconds: 120
       containers:
       - image: "{{IMAGE_PATH}}/chronos:{{IMAGE_TAG}}"

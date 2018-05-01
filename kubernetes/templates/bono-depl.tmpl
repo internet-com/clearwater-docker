@@ -13,6 +13,8 @@ spec:
         service: bono
         snmp: enabled
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/bono:{{IMAGE_TAG}}"
         imagePullPolicy: Always

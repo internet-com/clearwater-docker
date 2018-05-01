@@ -13,6 +13,8 @@ spec:
         service: ralf
         snmp: enabled
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/ralf:{{IMAGE_TAG}}"
         imagePullPolicy: Always

@@ -10,6 +10,8 @@ spec:
       labels:
         instance-type: etcd-pod
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - args:
         - --name

@@ -9,6 +9,8 @@ spec:
       labels:
         service: ellis
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/ellis:{{IMAGE_TAG}}"
         imagePullPolicy: Always

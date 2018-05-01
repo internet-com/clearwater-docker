@@ -13,6 +13,8 @@ spec:
         service: sprout
         snmp: enabled
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/sprout:{{IMAGE_TAG}}"
         imagePullPolicy: Always

@@ -9,6 +9,8 @@ spec:
       labels:
         service: homer
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/homer:{{IMAGE_TAG}}"
         imagePullPolicy: Always

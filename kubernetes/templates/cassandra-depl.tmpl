@@ -9,6 +9,8 @@ spec:
       labels:
         service: cassandra
     spec:
+      imagePullSecrets:
+        - name: registrypullsecret
       containers:
       - image: "{{IMAGE_PATH}}/cassandra:{{IMAGE_TAG}}"
         imagePullPolicy: Always
